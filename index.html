@@ -33,20 +33,10 @@
  //  });
 
 
-	firebase.database().ref('data').on('value',(snap)=>{
-    	console.log("test -> " + snap.username);
+	firebase.database().ref('data').on('username',(snap)=>{
+    	console.log("test -> " + snap.val());
   });
 
-	 firebase.database().ref('data').once('value',   function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      var childKey = childSnapshot.username;
-      var childData = childSnapshot.email;
-     
-     console.log(childKey)
-     console.log(childData)
-     
-    });
-  });
 
 </script>
 
