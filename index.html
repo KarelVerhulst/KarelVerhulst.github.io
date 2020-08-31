@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h1>Hello World</h1>
+	<h1>Hello World s</h1>
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
@@ -26,14 +26,15 @@
   // Get a reference to the database service
 	var database = firebase.database();
 
-	firebase.database().ref('data').set({
+	firebase.database().ref('data').push({
     username: "name",
     email: "email",
     profile_picture : "imageUrl"
   });
 
+
 	firebase.database().ref('data').on('value',(snap)=>{
-    	console.log("test -> " + snap.val());
+    	console.log("test -> " + snap.username);
   });
 
 </script>
