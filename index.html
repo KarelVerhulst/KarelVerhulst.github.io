@@ -26,15 +26,26 @@
 
   // Get a reference to the database service
 	
-	firebase.database().ref('data').push({
-    username: "name",
-    email: "email",
-    profile_picture : "imageUrl"
-  });
+	// firebase.database().ref('data').push({
+ //    username: "name",
+ //    email: "email",
+ //    profile_picture : "imageUrl"
+ //  });
 
 
 	firebase.database().ref('data').on('value',(snap)=>{
     	console.log("test -> " + snap.username);
+  });
+
+	 firebase.database().ref('data').once('value',   function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var childKey = childSnapshot.username;
+      var childData = childSnapshot.email;
+     
+     console.log(childKey)
+     console.log(childData)
+     
+    });
   });
 
 </script>
