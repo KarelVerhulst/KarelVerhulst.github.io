@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h1>Hello World !</h1>
+	<h1>Hello World</h1>
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
@@ -34,7 +34,7 @@
 
 
 	firebase.database().ref('data').on('value',(snap)=>{
-    	console.log("test -> " + snap.val().username);
+    	console.log("test -> " + snap.val());
   });
 
 
