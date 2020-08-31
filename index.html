@@ -3,41 +3,6 @@
 <body>
 	<h1>Hello World !!</h1>
 </body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyC9Z3BgFSDZbE1kmvKCTm4uux46MQTtQwA",
-    authDomain: "portfolio-725e2.firebaseapp.com",
-    databaseURL: "https://portfolio-725e2.firebaseio.com",
-    projectId: "portfolio-725e2",
-    storageBucket: "portfolio-725e2.appspot.com",
-    messagingSenderId: "172612004187",
-    appId: "1:172612004187:web:b1e05d5e5a96354b34127e"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  // Get a reference to the database service
-	
-	// firebase.database().ref('data').push({
- //    username: "name",
- //    email: "email",
- //    profile_picture : "imageUrl"
- //  });
-
-
-	firebase.database().ref('data').on('value',(snap)=>{
-    	console.log("test -> " + snap.val()[0].username);
-  });
-
-
-</script>
 
 </html>
