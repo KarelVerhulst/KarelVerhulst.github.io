@@ -23,7 +23,19 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  console.log(firebase.database)
+  // Get a reference to the database service
+	var database = firebase.database();
+
+	firebase.database().ref('data').set({
+    username: "name",
+    email: "email",
+    profile_picture : "imageUrl"
+  });
+
+	firebase.database().ref('data').on('value',(snap)=>{
+    	console.log("test -> " + snap.val());
+  });
+
 </script>
 
 </html>
