@@ -2,7 +2,50 @@
 <html>
 <body>
 	<h1>Hello World !!</h1>
+	<a href="Test/test.html">Go to Test</a>
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC9Z3BgFSDZbE1kmvKCTm4uux46MQTtQwA",
+    authDomain: "portfolio-725e2.firebaseapp.com",
+    databaseURL: "https://portfolio-725e2.firebaseio.com",
+    projectId: "portfolio-725e2",
+    storageBucket: "portfolio-725e2.appspot.com",
+    messagingSenderId: "172612004187",
+    appId: "1:172612004187:web:b1e05d5e5a96354b34127e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Get a reference to the database service
+	
+	// firebase.database().ref('data').push({
+ //    username: "Tom",
+ //    email: "tom@hotmail.com",
+ //    profile_picture : "imageUrl2"
+ //  });
+
+
+
+	firebase.database().ref('data').once('value', function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    var childKey = childSnapshot.key;
+    var childData = childSnapshot.val();
+
+    console.log(childData.username);
+    // ...
+  });
+});
+
+
+</script>
 
 </html>
