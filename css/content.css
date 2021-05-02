@@ -1,0 +1,18 @@
+nav {
+	position: fixed;
+	width: 320px;
+	background-color: #362b2e;
+	height: 100vh;
+	z-index: 1;
+	top: 0;
+}
+
+.container {
+}
+
+.test {
+	height: 5000px;
+
+	margin-left: 320px;
+width: calc(100% - 320px);
+}
