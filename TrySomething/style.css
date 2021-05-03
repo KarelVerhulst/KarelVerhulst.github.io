@@ -16,11 +16,11 @@ font-family: 'Josefin Sans', sans-serif;
 	align-items: center;
 }
 .main{
-	height:  100vh;
+	height:  60vh;
 }
 .box{
-	width: 250px;
-	height: 250px;
+	width: 350px;
+	height: 350px;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.288);
 	border-radius: 23px;
 	flex-direction: column;
@@ -54,8 +54,14 @@ font-family: 'Josefin Sans', sans-serif;
 	cursor: pointer;
 	transition: all .4s;
 }
-.arr_container{
+.arr_container i{
 	transform: rotate(45deg);
+	position: absolute;
+	animation-name: arrowTrigger;
+  	animation-duration: 4s;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+  	animation-timing-function: ease-out;
 }
 .active_arr{
 	transform: translate(80%, 80%);
@@ -73,7 +79,7 @@ font-family: 'Josefin Sans', sans-serif;
 	transform: translate(-80%, -80%) rotate(90deg);
 }
 .active{
-	transform: translate() rotate(0);
+	transform: translate(0) rotate(0);
 }
 .left_container p{
 	margin-bottom: 15px;
@@ -99,4 +105,9 @@ font-family: 'Josefin Sans', sans-serif;
 }
 .left_container .icons i:hover{
 	color: #2c5364;
+}
+
+@keyframes arrowTrigger {
+  from {top:10px; left: 10px;}
+  to {top:20px; left: 20px;}
 }

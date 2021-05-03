@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Try Something</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://use.fontawesome.com/3742c57757.js"></script>
 </head>
@@ -52,7 +53,7 @@
 		});
 
 		clc.addEventListener("click", ()=> {
-			arr.classList.add("active_arr");
+			arr.classList.remove("active_arr");
 
 			if (left_container.classList.contains("active")) {
 				left_container.classList.remove("active");
