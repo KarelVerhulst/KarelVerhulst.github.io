@@ -33,12 +33,12 @@ body{
 	overflow: hidden;
 }
 .box img{
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
+	width: 150px;
+	height: 180px;
+	border-radius: 20px;
 }
 .user_name{
-	margin-bottom: 5px;
+	margin: 10px 0;
 	font-size: 2rem; 
 }
 .skill{
