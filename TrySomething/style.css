@@ -151,7 +151,7 @@ body{
 .transparent-box .caption {
     position: absolute;
     bottom: 5px;
-    left: 20px;
+    left: 10px;
     opacity: 0;
     transition: transform .3s ease,opacity .3s ease;
 }

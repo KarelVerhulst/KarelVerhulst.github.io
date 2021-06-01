@@ -119,12 +119,16 @@
 
 				<div class="card">
 					<a href="" target="_blank">
-						<div class="img-box">
-							<img src="" alt="project"> 
+						<div class="img-box" id="video1">
+							<!-- <img src="" alt="project">  -->
+							<video  width="165" height="165" loop>
+								<source src="../videos/pattern.mp4 " type="video/mp4">
+							  Your browser does not support the video tag.
+							</video>
 							<div class="transparent-box">
 								<div class="caption">
-									<p>Title card</p> 
-									<p class="opacity-low">View more</p>
+									<p>Object pattern on camera distance</p> 
+									<!-- <p class="opacity-low">View more</p> -->
 								</div>
 							</div>
 						</div>
@@ -133,12 +137,16 @@
 
 				<div class="card">
 					<a href="" target="_blank">
-						<div class="img-box">
-							<img src="" alt="project"> 
+						<div class="img-box" id="video2">
+							<!-- <img src="" alt="project">  -->
+							<video width="165" height="165" loop>
+								<source src="../videos/dissolve.mp4 " type="video/mp4">
+							  Your browser does not support the video tag.
+							</video>
 							<div class="transparent-box">
 								<div class="caption">
-									<p>Title card</p> 
-									<p class="opacity-low">View more</p>
+									<p>Dissolve object from two sides</p> 
+									<!-- <p class="opacity-low">View more</p> -->
 								</div>
 							</div>
 						</div>
@@ -178,6 +186,23 @@
 				left_container.classList.add("off");
 			}
 		});
+
+
+
+		videoSettingWithMouse("video1");
+		videoSettingWithMouse("video2");
+
+		function videoSettingWithMouse(id) {
+			document.getElementById(id).addEventListener("mouseover", function() {
+				//this.play();
+				this.childNodes[3].play();
+			});
+
+			document.getElementById(id).addEventListener("mouseleave", function() {
+				//this.pause();
+				this.childNodes[3].pause();
+			});
+		}
 
 	</script>
 </body>
