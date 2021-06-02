@@ -129,7 +129,18 @@ body{
 .card{
 	display: inline-block;
 }
-
+.card .fa-video{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.card .fa-video>span{
+	font-size: 10px;
+	margin-left: 5px;
+	font-weight: lighter;
+	opacity: 1;
+	transition: opacity .3s ease;
+}
 .img-box {
 	border-radius: 5px;
     box-sizing: content-box;
@@ -182,6 +193,10 @@ body{
 }
 .img-box:hover .caption {
 	opacity: 1;
+}
+.img-box:hover .fa-video>span{
+	opacity: 0;
+	transition: opacity .3s ease;
 }
 .caption {
 	font-size: 12px;
