@@ -27,7 +27,6 @@ const clc = document.querySelector(".cancel");
 			document.getElementById(id).addEventListener("mouseover", function() {
 				//this.play();
 				this.childNodes[5].play();
-				console.log(this.childNodes);
 			});
 
 			document.getElementById(id).addEventListener("mouseleave", function() {
