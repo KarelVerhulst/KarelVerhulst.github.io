@@ -42,7 +42,7 @@ function videoSettingWithMouse(id) {
 // change the tab view when going to another tab
 let docTitle = document.title;
 window.addEventListener('blur', () => {
-	document.title = 'Come back &#128546'});
+	document.title = 'You left me 😥'});
 
 window.addEventListener('focus', () => {
 	document.title = docTitle;
